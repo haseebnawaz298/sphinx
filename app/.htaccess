@@ -1,0 +1,8 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteRule ^([^\.]+)/([0-9]+) $1.php?$2=$a [NC,L]
+
+php_value auto_prepend_file "../system/config.php"
+
